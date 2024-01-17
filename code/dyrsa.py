@@ -3,7 +3,7 @@ from tqdm import tqdm
 from scipy import stats
 from nltools.stats import _calc_pvalue as calc_pvalue
 
-def get_permuted_pval(nsubj, nboot, all_scores, all_possible_zpairs, replacement=True, write_zstat=True, write_boot=False):
+def run_permutations(nsubj, nboot, all_scores, all_possible_zpairs, replacement=True, write_zstat=True, write_boot=False):
     n_centers = all_scores.shape[0]
 
     if write_boot:
